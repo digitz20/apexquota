@@ -165,17 +165,6 @@
         .download-button:active {
             transform: translateY(0);
         }
-        .download-status {
-            text-align: center;
-            font-size: 0.9em;
-            color: #1a3c5e;
-            margin-top: 12px;
-            margin-bottom: 20px;
-            display: none;
-            font-weight: 600;
-            position: relative;
-            z-index: 2;
-        }
         .signature-block {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -272,7 +261,6 @@
             <button class="download-button" onclick="triggerDownload()">
                 Download Purchase Agreement
             </button>
-            <div class="download-status" id="downloadStatus">Document downloaded successfully.</div>
         </div>
 
         <h2>Offer Terms & Conditions</h2>
@@ -314,7 +302,6 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            document.getElementById('downloadStatus').style.display = 'block';
         }
 
         window.onload = function() {
